@@ -1,0 +1,84 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.yardimci_steve.walk": {
+            "loop": true,
+            "animation_length": 1.0,
+            "bones": {
+                "rightArm": {
+                    "rotation": [
+                        "math.sin(query.modified_distance_moved * 70) * 30",
+                        0,
+                        0
+                    ]
+                },
+                "leftArm": {
+                    "rotation": [
+                        "math.sin(query.modified_distance_moved * 70) * -30",
+                        0,
+                        0
+                    ]
+                },
+                "rightLeg": {
+                    "rotation": [
+                        "math.sin(query.modified_distance_moved * 70) * -30",
+                        0,
+                        0
+                    ]
+                },
+                "leftLeg": {
+                    "rotation": [
+                        "math.sin(query.modified_distance_moved * 70) * 30",
+                        0,
+                        0
+                    ]
+                }
+            }
+        },
+        "animation.yardimci_steve.attack": {
+            "loop": false,
+            "animation_length": 0.4,
+            "bones": {
+                "rightArm": {
+                    "rotation": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.15": [
+                            -90,
+                            0,
+                            0
+                        ],
+                        "0.4": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        },
+        "animation.yardimci_steve.idle": {
+            "loop": true,
+            "animation_length": 4.0,
+            "bones": {
+                "rightArm": {
+                    "rotation": [
+                        "math.sin(query.life_time * 60) * 2",
+                        0,
+                        "math.sin(query.life_time * 40) * 1"
+                    ]
+                },
+                "leftArm": {
+                    "rotation": [
+                        "math.sin(query.life_time * 60 + 180) * 2",
+                        0,
+                        "math.sin(query.life_time * 40 + 180) * -1"
+                    ]
+                }
+            }
+        }
+    }
+}

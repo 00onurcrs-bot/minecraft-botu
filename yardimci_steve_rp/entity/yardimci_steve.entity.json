@@ -1,0 +1,43 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "proje:yardimci_steve",
+            "enable_attachables": true,
+            "held_item_ignores_lighting": true,
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/steve"
+            },
+            "geometry": {
+                "default": "geometry.yardimci_steve"
+            },
+            "animations": {
+                "walk": "animation.yardimci_steve.walk",
+                "attack": "animation.yardimci_steve.attack",
+                "idle": "animation.yardimci_steve.idle",
+                "look": "animation.humanoid.look_at_target.default"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "walk": "query.modified_move_speed > 0.01"
+                    },
+                    {
+                        "idle": "query.modified_move_speed <= 0.01"
+                    },
+                    "look"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.yardimci_steve"
+            ],
+            "spawn_egg": {
+                "base_color": "#00AAFF",
+                "overlay_color": "#0000FF"
+            }
+        }
+    }
+}
